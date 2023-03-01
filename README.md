@@ -1,1 +1,16 @@
-# homework
+decimal=int(input())
+decimal_hexadecimal={0:0,1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:'a',11:'b',12:'c',13:'d',14:'e',15:'f'}
+binary=[0,0,0,0,0,0,0,0]
+hexadecimal=[0,0]
+binary[0]=decimal//128
+binary[1]=decimal%128//64
+binary[2]=decimal%64//32
+binary[3]=decimal%32//16
+binary[4]=decimal%16//8
+binary[5]=decimal%8//4
+binary[6]=decimal%4//2
+binary[7]=decimal%2
+print(binary[0],binary[1],binary[2],binary[3],binary[4],binary[5],binary[6],binary[7],sep='')
+hexadecimal[0]=decimal_hexadecimal[decimal//16]
+hexadecimal[1]=decimal_hexadecimal[decimal%16]
+print(hexadecimal[0],hexadecimal[1],sep='')
